@@ -72,6 +72,7 @@ nav a:hover{color:var(--gold)}
   background:#eceae7;
   display:flex;
   align-items:center;
+  justify-content:flex-start;
   padding:120px 6% 180px;
 }
   
@@ -107,11 +108,23 @@ nav a:hover{color:var(--gold)}
   object-position:center;
   display:block;
 }
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to right,
+      rgba(236,234,231,0.95) 0%,
+      rgba(236,234,231,0.88) 18%,
+      rgba(236,234,231,0.55) 34%,
+      rgba(236,234,231,0.05) 55%);
+}
   
 .hero-content{
   position:relative;
   z-index:5;
   max-width:620px;
+  width:100%;
 }
   
 .hero::after{

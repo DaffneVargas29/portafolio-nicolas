@@ -97,48 +97,19 @@ nav a:hover{color:var(--gold)}
 .hero-visual{
   position:relative;
   min-height:620px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   z-index:2;
 }
 
-.portrait{
-  position:absolute;
-  left:18%;
-  bottom:0;
-  width:430px;
-  z-index:5;
-}
-
-.portrait img{
+.hero-composition{
   width:100%;
-  filter:grayscale(100%) contrast(1.05);
-  box-shadow:none;
-  border-radius:0;
+  max-width:760px;
+  object-fit:contain;
+  filter:grayscale(100%) contrast(1.02);
 }
-
-.piece{
-  position:absolute;
-  z-index:3;
-  filter:grayscale(100%) contrast(1.05);
-}
-
-.piece-1{
-  width:190px;
-  right:230px;
-  top:100px;
-}
-
-.piece-2{
-  width:130px;
-  right:260px;
-  bottom:190px;
-}
-
-.piece-3{
-  width:230px;
-  right:15px;
-  bottom:105px;
-}
-
+  
 .hero::after{
   content:"";
   position:absolute;
@@ -205,40 +176,6 @@ nav a:hover{color:var(--gold)}
   color:#fff;
 }
 
-.hero-visual{
-  position:relative;
-  min-height:580px;
-  z-index:2;
-}
-.portrait{
-  position:absolute;
-  left:14%;
-  bottom:0;
-  width:54%;
-  min-width:320px;
-  z-index:5;
-}
-
-.portrait img{
-  border-radius:0;
-  filter:grayscale(100%) contrast(1.05);
-  box-shadow:
-    0 30px 70px rgba(0,0,0,.35);
-}
-.portrait{
-  position:absolute;
-  left:8%;
-  bottom:0;
-  width:48%;
-  min-width:300px;
-  z-index:3;
-}
-
-.portrait img{
-  border-radius:18px;
-  filter:grayscale(100%);
-  box-shadow:0 25px 55px rgba(0,0,0,.25);
-}
 .services{
   margin:-35px 6% 0;
   position:relative;
@@ -605,13 +542,7 @@ footer{
 
  <div class="hero-visual">
 
-  <img class="piece piece-1" src="assets/secc-9.jpeg" alt="">
-  <img class="piece piece-2" src="assets/secc-10.jpeg" alt="">
-  <img class="piece piece-3" src="assets/secc-8.jpeg" alt="">
-
-  <div class="portrait">
-    <img src="assets/nicolas.png" alt="Nicolás Gallardo">
-  </div>
+  <img class="hero-composition" src="assets/hero-industrial-bg.png" alt="">
 
 </div>
 </div>

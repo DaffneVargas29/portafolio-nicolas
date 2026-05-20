@@ -751,6 +751,50 @@ body::before{
 
   color:#111;
 }
+/* FONDO GENERAL MÁS LIMPIO */
+body{
+  background:
+    linear-gradient(135deg, #f7f7f5 0%, #eeeeeb 35%, #d8d8d5 70%, #f8f8f8 100%);
+  background-attachment:fixed;
+}
+
+/* GALERÍA ARREGLADA */
+.gallery{
+  padding:75px 6%;
+  background:linear-gradient(135deg, #f8f8f6, #ececea, #d8d8d5);
+}
+
+.gallery-grid img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:12px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.gallery-grid .img-main{
+  height:538px;
+  grid-row:span 2;
+  object-fit:cover;
+  object-position:center center;
+}
+
+.gallery-grid .img-piar{
+  object-position:center center;
+}
+
+.gallery-grid .img-pcr{
+  object-position:center center;
+}
+
+.gallery-grid .img-somar{
+  object-position:center center;
+}
+
+.gallery-grid .img-feup{
+  object-position:center center;
+}
 </style>
 </head>
 
@@ -915,11 +959,11 @@ body::before{
   <h2>DISEÑO, PRODUCTO Y VISUALIZACIÓN</h2>
 
   <div class="gallery-grid">
-    <img src="assets/Proyectos.jpeg" alt="Proyectos">
-    <img src="assets/secc-5.jpeg" alt="SECC">
-    <img src="assets/branding-7.jpeg" alt="Branding">
-    <img src="assets/infraestructura1.jpeg" alt="Infraestructura">
-    <img src="assets/BioId.jpeg" alt="BioID">
+    <img class="img-main" src="assets/Proyectos.jpeg" alt="Proyectos principales">
+    <img class="img-piar" src="assets/piar-1.jpeg" alt="PIAR">
+    <img class="img-somar" src="assets/Somar2.jpeg" alt="Somar">
+    <img class="img-pcr" src="assets/secc-1.jpeg" alt="PCR1000">
+    <img class="img-feup" src="assets/Feup.jpeg" alt="FEUP">
   </div>
 </section>
 

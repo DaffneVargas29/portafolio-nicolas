@@ -1,1 +1,792 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nicolás Gallardo | Ingeniería & Diseño</title>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#f4f4f2;
+  color:#151515;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+:root{
+  --black:#111;
+  --dark:#1d1d1d;
+  --gray:#8e8e8e;
+  --light:#f5f5f3;
+  --gold:#c79b3b;
+  --soft:#e5e5e2;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  height:82px;
+  padding:0 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(245,245,243,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #ddd;
+}
+
+.logo{
+  font-weight:900;
+  font-size:34px;
+  letter-spacing:-3px;
+}
+
+nav{
+  display:flex;
+  gap:34px;
+  font-size:13px;
+  font-weight:800;
+}
+
+nav a:hover{color:var(--gold)}
+
+.cv-btn{
+  background:#111;
+  color:white;
+  padding:14px 24px;
+  border-radius:4px;
+  font-size:13px;
+  font-weight:800;
+}
+
+.hero{
+  min-height:720px;
+  padding:70px 6% 40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  background:
+    radial-gradient(circle at 80% 15%,rgba(0,0,0,.16),transparent 28%),
+    linear-gradient(120deg,#ffffff 0%,#eeeeec 42%,#bdbdb8 100%);
+  overflow:hidden;
+}
+
+.kicker{
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+.line{
+  width:90px;
+  height:2px;
+  background:var(--gold);
+  margin:16px 0 25px;
+}
+
+.hero h1{
+  font-size:76px;
+  line-height:.92;
+  letter-spacing:-4px;
+  font-weight:900;
+}
+
+.hero p{
+  margin-top:24px;
+  max-width:560px;
+  color:#333;
+  font-size:18px;
+  line-height:1.6;
+  font-weight:500;
+}
+
+.hero-actions{
+  margin-top:34px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 26px;
+  font-size:13px;
+  font-weight:900;
+  border:1px solid #111;
+  border-radius:3px;
+}
+
+.btn-dark{
+  background:#111;
+  color:#fff;
+}
+
+.hero-visual{
+  position:relative;
+  min-height:580px;
+}
+
+.portrait{
+  position:absolute;
+  left:8%;
+  bottom:0;
+  width:48%;
+  min-width:300px;
+  z-index:3;
+}
+
+.portrait img{
+  border-radius:18px;
+  filter:grayscale(100%);
+  box-shadow:0 25px 55px rgba(0,0,0,.25);
+}
+
+.float-img{
+  position:absolute;
+  border-radius:16px;
+  object-fit:cover;
+  box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.float-1{
+  right:0;
+  top:55px;
+  width:40%;
+}
+
+.float-2{
+  right:12%;
+  bottom:95px;
+  width:44%;
+}
+
+.float-3{
+  right:2%;
+  bottom:0;
+  width:28%;
+}
+
+.services{
+  margin:-35px 6% 0;
+  position:relative;
+  z-index:5;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(12px);
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,.13);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  overflow:hidden;
+}
+
+.service{
+  padding:38px 26px;
+  text-align:center;
+  border-right:1px solid #d4d4d1;
+}
+
+.service:last-child{border-right:none}
+.icon{
+  font-size:38px;
+  margin-bottom:14px;
+}
+.service h3{
+  font-size:14px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+.service p{
+  font-size:13px;
+  color:#555;
+  line-height:1.55;
+  font-weight:500;
+}
+
+.projects{
+  margin-top:70px;
+  padding:75px 6%;
+  color:#fff;
+  background:
+    radial-gradient(circle at 80% 15%,rgba(255,255,255,.12),transparent 30%),
+    linear-gradient(120deg,#080808,#242424 55%,#111);
+}
+
+.section-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:34px;
+}
+
+.section-label{
+  color:var(--gold);
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.projects h2,.about h2,.process h2,.contact h2{
+  font-size:42px;
+  line-height:1.05;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.project-card{
+  background:#202020;
+  border:1px solid #383838;
+  border-radius:8px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.project-card img{
+  width:100%;
+  height:185px;
+  object-fit:cover;
+}
+
+.project-card .content{
+  padding:22px;
+}
+
+.project-card h3{
+  font-size:18px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.project-card p{
+  color:#ccc;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.stats{
+  margin:-36px 6% 0;
+  position:relative;
+  z-index:6;
+  background:#f8f8f6;
+  border-radius:12px;
+  padding:30px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  box-shadow:0 20px 45px rgba(0,0,0,.16);
+}
+
+.stat{
+  border-right:1px solid #d7d7d4;
+  padding:8px 26px;
+}
+
+.stat:last-child{border-right:none}
+
+.stat strong{
+  font-size:34px;
+  font-weight:900;
+}
+
+.stat span{
+  display:block;
+  margin-top:4px;
+  color:#555;
+  font-size:12px;
+  font-weight:800;
+}
+
+.about{
+  padding:80px 6%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  background:
+    linear-gradient(135deg,#fbfbfa,#e5e5e2 52%,#c9c9c5);
+}
+
+.about p{
+  color:#333;
+  line-height:1.75;
+  font-size:15px;
+  font-weight:500;
+  margin-top:18px;
+}
+
+.skills{
+  padding-top:20px;
+}
+
+.skill{
+  margin-bottom:20px;
+}
+
+.skill-row{
+  display:flex;
+  justify-content:space-between;
+  font-weight:800;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.bar{
+  height:8px;
+  background:#d0d0ce;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.bar div{
+  height:100%;
+  background:#111;
+}
+
+.gallery{
+  padding:75px 6%;
+  background:#f7f7f5;
+}
+
+.gallery h2{
+  font-size:42px;
+  font-weight:900;
+  margin:10px 0 32px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:18px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.gallery-grid img:first-child{
+  height:538px;
+  grid-row:span 2;
+}
+
+.process{
+  padding:75px 6%;
+  text-align:center;
+  background:linear-gradient(135deg,#eeeeec,#d1d1cd,#f6f6f4);
+}
+
+.steps{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:22px;
+}
+
+.step{
+  padding:25px 16px;
+}
+
+.circle{
+  width:72px;
+  height:72px;
+  background:#111;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  margin:0 auto 18px;
+}
+
+.step h3{
+  font-size:15px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.step p{
+  color:#555;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.tools{
+  padding:60px 6%;
+  background:#f8f8f6;
+}
+
+.tool-grid{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:14px;
+  margin-top:25px;
+}
+
+.tool{
+  background:white;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:22px 12px;
+  text-align:center;
+  font-weight:800;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.contact{
+  padding:70px 6%;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:50px;
+  background:
+    radial-gradient(circle at 95% 50%,rgba(0,0,0,.09),transparent 25%),
+    linear-gradient(135deg,#ffffff,#dededa);
+}
+
+.contact p{
+  margin:14px 0;
+  color:#333;
+  font-weight:600;
+  line-height:1.6;
+}
+
+.qr{
+  margin-top:20px;
+  width:150px;
+  border:10px solid white;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+footer{
+  background:#070707;
+  color:#aaa;
+  padding:22px 6%;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px;
+}
+
+@media(max-width:1000px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero h1{font-size:54px}
+  .hero-visual{min-height:520px}
+  .services,.project-grid,.stats,.steps,.tool-grid{grid-template-columns:1fr 1fr}
+  .about,.contact{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-grid img,.gallery-grid img:first-child{height:260px;grid-row:auto}
+}
+
+@media(max-width:620px){
+  header{height:auto;padding:18px 6%;gap:15px}
+  .cv-btn{padding:12px 16px}
+  .hero h1{font-size:44px}
+  .services,.project-grid,.stats,.steps,.tool-grid{grid-template-columns:1fr}
+  .stat{border-right:none;border-bottom:1px solid #ddd}
+  .stat:last-child{border-bottom:none}
+  footer{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NG</div>
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#proyectos">PROYECTOS</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#sobremi">SOBRE MÍ</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+  <a class="cv-btn" href="assets/cv.pdf" download>⬇ DESCARGAR CV</a>
+</header>
+
+<section class="hero" id="inicio">
+  <div>
+    <div class="kicker">Ingeniero en Fabricación & Diseño Industrial</div>
+    <div class="line"></div>
+    <h1>NICOLÁS<br>GALLARDO</h1>
+    <p>
+      Diseño mecánico, modelado 3D, ingeniería de detalle y soluciones técnicas aplicadas a la industria minera, infraestructura y sistemas industriales reales.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-dark" href="#proyectos">VER PROYECTOS →</a>
+      <a class="btn" href="#contacto">CONTACTAR →</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="portrait">
+      <img src="assets/nicolas.png" alt="Nicolás Gallardo">
+    </div>
+    <img class="float-img float-1" src="assets/Logotipo.jpeg" alt="Logo NG Ingeniería">
+    <img class="float-img float-2" src="assets/PCR1000.jpeg" alt="PCR1000">
+    <img class="float-img float-3" src="assets/piar-7.jpeg" alt="PIAR">
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="service">
+    <div class="icon">□</div>
+    <h3>DISEÑO MECÁNICO</h3>
+    <p>Desarrollo de soluciones mecánicas funcionales, eficientes y listas para fabricación.</p>
+  </div>
+  <div class="service">
+    <div class="icon">◇</div>
+    <h3>MODELADO 3D</h3>
+    <p>Modelado paramétrico, visualización técnica, renderizado y documentación de producto.</p>
+  </div>
+  <div class="service">
+    <div class="icon">⚙</div>
+    <h3>FABRICACIÓN</h3>
+    <p>Preparación para CNC, prototipos, validación técnica y mejora continua.</p>
+  </div>
+  <div class="service">
+    <div class="icon">⌂</div>
+    <h3>INDUSTRIA & MINERÍA</h3>
+    <p>Experiencia aplicada en minería, sensores, IoT e infraestructura industrial.</p>
+  </div>
+</section>
+
+<section class="projects" id="proyectos">
+  <div class="section-top">
+    <div>
+      <div class="section-label">Proyectos destacados</div>
+      <h2>SOLUCIONES QUE FUNCIONAN</h2>
+    </div>
+    <a href="assets/portafolio.pdf" class="btn">VER PORTAFOLIO COMPLETO →</a>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <img src="assets/piar-6.jpeg" alt="PIAR">
+      <div class="content">
+        <h3>PIAR</h3>
+        <p>Panel identificador de alta resistencia para CAEX. Solución orientada a visibilidad, seguridad operacional y trazabilidad visual.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="assets/secc-1.jpeg" alt="SECC PCR1000">
+      <div class="content">
+        <h3>SECC PCR1000</h3>
+        <p>Sistema de eficiencia y control de combustible con comunicación LoRa e integración de datos para operación minera.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="assets/Monitoreo-interno.jpeg" alt="LixiPress">
+      <div class="content">
+        <h3>LixiPress</h3>
+        <p>Monitoreo interno y riego presurizado en pilas de lixiviación, orientado a optimización metalúrgica basada en datos.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="assets/Ozonix.jpeg" alt="Ozonix">
+      <div class="content">
+        <h3>Ozonix</h3>
+        <p>Sistema avanzado de nano burbujas y ozono aplicado a procesos industriales y tratamiento de soluciones.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><strong>+15</strong><span>PROYECTOS DESARROLLADOS</span></div>
+  <div class="stat"><strong>3+</strong><span>AÑOS DE EXPERIENCIA</span></div>
+  <div class="stat"><strong>10+</strong><span>HERRAMIENTAS DOMINADAS</span></div>
+  <div class="stat"><strong>CHILE</strong><span>MINERÍA, INDUSTRIA E INFRAESTRUCTURA</span></div>
+</section>
+
+<section class="about" id="sobremi">
+  <div>
+    <div class="section-label">Sobre mí</div>
+    <h2>DISEÑO CON PROPÓSITO,<br>INGENIERÍA CON IMPACTO.</h2>
+    <p>
+      Ingeniero en Fabricación y Diseño Industrial con experiencia en desarrollo de soluciones mecánicas e integración de sistemas para la industria minera.
+    </p>
+    <p>
+      Especializado en ingeniería de detalle, modelado 3D, validación técnica de dispositivos implementados en operaciones reales, documentación bajo estándares ISO 9001 y adaptación a entornos industriales exigentes.
+    </p>
+    <a class="btn btn-dark" style="margin-top:22px" href="assets/cv.pdf" download>DESCARGAR CV →</a>
+  </div>
+
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-row"><span>Diseño mecánico y técnico</span><span>95%</span></div>
+      <div class="bar"><div style="width:95%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-row"><span>Modelado 3D</span><span>90%</span></div>
+      <div class="bar"><div style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-row"><span>Documentación técnica</span><span>88%</span></div>
+      <div class="bar"><div style="width:88%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-row"><span>Fabricación CNC y prototipado</span><span>82%</span></div>
+      <div class="bar"><div style="width:82%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-row"><span>IoT / Sensores / Integración</span><span>78%</span></div>
+      <div class="bar"><div style="width:78%"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="section-label">Galería técnica</div>
+  <h2>DISEÑO, PRODUCTO Y VISUALIZACIÓN</h2>
+
+  <div class="gallery-grid">
+    <img src="assets/Proyectos.jpeg" alt="Proyectos">
+    <img src="assets/secc-5.jpeg" alt="SECC">
+    <img src="assets/branding-7.jpeg" alt="Branding">
+    <img src="assets/infraestructura1.jpeg" alt="Infraestructura">
+    <img src="assets/BioId.jpeg" alt="BioID">
+  </div>
+</section>
+
+<section class="projects">
+  <div class="section-top">
+    <div>
+      <div class="section-label">Más proyectos</div>
+      <h2>PORTAFOLIO INDUSTRIAL</h2>
+    </div>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <img src="assets/Vialex.jpeg" alt="Vialex">
+      <div class="content">
+        <h3>Vialex</h3>
+        <p>Soluciones de señalización, infraestructura vial y diseño aplicado a sistemas de seguridad y orientación.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="assets/Somar.jpeg" alt="Somar">
+      <div class="content">
+        <h3>Somar</h3>
+        <p>Desarrollo visual y técnico de soluciones industriales con enfoque en diseño, presentación y factibilidad.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="assets/Feup.jpeg" alt="FEUP">
+      <div class="content">
+        <h3>FEUP</h3>
+        <p>Diseño y desarrollo de soporte biométrico para integración de cámara y lector biométrico.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="assets/branding-10.jpeg" alt="Branding">
+      <div class="content">
+        <h3>Branding técnico</h3>
+        <p>Material técnico-comercial, catálogos, identidad visual y documentación para productos industriales.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="process">
+  <div class="section-label">Mi proceso de trabajo</div>
+  <h2>DE LA IDEA A LA SOLUCIÓN</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="circle">01</div>
+      <h3>Entendimiento</h3>
+      <p>Análisis de necesidades, contexto operacional y requerimientos técnicos.</p>
+    </div>
+    <div class="step">
+      <div class="circle">02</div>
+      <h3>Diseño</h3>
+      <p>Desarrollo de propuestas, conceptos funcionales y alternativas de solución.</p>
+    </div>
+    <div class="step">
+      <div class="circle">03</div>
+      <h3>Modelado 3D</h3>
+      <p>Creación de modelos paramétricos y visualización técnica del producto.</p>
+    </div>
+    <div class="step">
+      <div class="circle">04</div>
+      <h3>Documentación</h3>
+      <p>Planos, fichas, archivos de fabricación y material técnico-comercial.</p>
+    </div>
+    <div class="step">
+      <div class="circle">05</div>
+      <h3>Validación</h3>
+      <p>Prototipado, fabricación, revisión técnica y ajustes post-implementación.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tools">
+  <div class="section-label">Herramientas que utilizo</div>
+  <div class="tool-grid">
+    <div class="tool">Inventor</div>
+    <div class="tool">Fusion 360</div>
+    <div class="tool">AutoCAD</div>
+    <div class="tool">Nesting</div>
+    <div class="tool">Blender</div>
+    <div class="tool">Photoshop</div>
+    <div class="tool">Canva</div>
+    <div class="tool">Odoo</div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div>
+    <div class="section-label">¿Tienes un proyecto en mente?</div>
+    <h2>HABLEMOS DE TU PRÓXIMO PROYECTO</h2>
+    <p>
+      Disponible para nuevos desafíos, colaboraciones, proyectos industriales, documentación técnica, modelado 3D y soluciones aplicadas a minería e infraestructura.
+    </p>
+    <a class="btn btn-dark" href="mailto:ngallardobertrand@gmail.com">CONTACTARME →</a>
+  </div>
+
+  <div>
+    <p>📩 ngallardobertrand@gmail.com</p>
+    <p>📱 +569 76052637</p>
+    <p>📍 V Región, Chile</p>
+    <p>🔗 linkedin.com/in/nicolásgb/</p>
+    <img class="qr" src="assets/qr.png" alt="QR WhatsApp">
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Nicolás Gallardo. Todos los derechos reservados.</span>
+  <span>Ingeniería, diseño mecánico, modelado 3D y soluciones industriales.</span>
+</footer>
+
+</body>
+</html>

@@ -72,12 +72,32 @@ nav a:hover{color:var(--gold)}
   grid-template-columns:1fr 1fr;
   gap:40px;
   align-items:center;
-  background:
-    radial-gradient(circle at 80% 15%,rgba(0,0,0,.16),transparent 28%),
-    linear-gradient(120deg,#ffffff 0%,#eeeeec 42%,#bdbdb8 100%);
   overflow:hidden;
-}
+  position:relative;
 
+  background:
+    linear-gradient(
+      135deg,
+      #f4f4f2 0%,
+      #d9d9d7 25%,
+      #bcbcbc 45%,
+      #ececeb 70%,
+      #f9f9f8 100%
+    );
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.6), transparent 20%),
+    linear-gradient(120deg, transparent 0%, rgba(255,255,255,.15) 40%, transparent 70%);
+
+  mix-blend-mode:overlay;
+  opacity:.8;
+  pointer-events:none;
+}  
 .kicker{
   font-size:13px;
   font-weight:800;
@@ -97,15 +117,19 @@ nav a:hover{color:var(--gold)}
   line-height:.92;
   letter-spacing:-4px;
   font-weight:900;
+  position:relative;
+  z-index:2;
 }
 
 .hero p{
   margin-top:24px;
   max-width:560px;
-  color:#333;
+  color:#202020;
   font-size:18px;
   line-height:1.6;
   font-weight:500;
+  position:relative;
+  z-index:2;
 }
 
 .hero-actions{
@@ -134,8 +158,8 @@ nav a:hover{color:var(--gold)}
 .hero-visual{
   position:relative;
   min-height:580px;
+  z-index:2;
 }
-
 .portrait{
   position:absolute;
   left:8%;

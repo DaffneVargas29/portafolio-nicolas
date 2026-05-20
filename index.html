@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolás Gallardo | Portafolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+    }
+
+    body{
+      background:
+      radial-gradient(circle at top left,#2f2f2f 0%,#121212 35%),
+      radial-gradient(circle at bottom right,#4b4b4b 0%,#0a0a0a 35%),
+      #0d0d0d;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .bg{
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      background:
+      linear-gradient(120deg,rgba(255,255,255,0.03),transparent),
+      linear-gradient(-120deg,rgba(255,255,255,0.02),transparent);
+      z-index:-1;
+    }
+
+    header{
+      width:100%;
+      padding:25px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      backdrop-filter:blur(10px);
+      position:fixed;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:1.4rem;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:30px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      opacity:0.7;
+    }
+
+    .cv-btn{
+      padding:12px 22px;
+      border-radius:12px;
+      background:white;
+      color:black;
+      text-decoration:none;
+      font-weight:700;
+      transition:0.3s;
+    }
+
+    .cv-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:140px 8% 80px;
+      gap:50px;
+    }
+
+    .hero-text{
+      max-width:650px;
+    }
+
+    .hero-text h1{
+      font-size:5rem;
+      line-height:1;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      font-size:1.1rem;
+      color:#cfcfcf;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .primary-btn{
+      padding:15px 28px;
+      background:white;
+      color:black;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .secondary-btn{
+      padding:15px 28px;
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:14px;
+      text-decoration:none;
+      color:white;
+      backdrop-filter:blur(10px);
+    }
+
+    .hero-image{
+      position:relative;
+    }
+
+    .hero-image img{
+      width:420px;
+      border-radius:28px;
+      filter:grayscale(100%);
+      object-fit:cover;
+      box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    }
+
+    .projects{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      font-size:3rem;
+      margin-bottom:50px;
+      font-weight:800;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      overflow:hidden;
+      backdrop-filter:blur(10px);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      filter:grayscale(10%);
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card-content h3{
+      font-size:1.5rem;
+      margin-bottom:10px;
+    }
+
+    .card-content p{
+      color:#bdbdbd;
+      line-height:1.7;
+    }
+
+    footer{
+      padding:60px 8%;
+      text-align:center;
+      color:#9e9e9e;
+    }
+
+    @media(max-width:950px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:3.5rem;
+      }
+
+      .hero-image img{
+        width:320px;
+      }
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+
+  <div class="logo">
+    NICOLÁS GALLARDO
+  </div>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Proyectos</a>
+    <a href="#">Experiencia</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <a class="cv-btn" href="#">
+    Descargar CV
+  </a>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-text">
+
+    <h1>
+      Ingeniería,<br>
+      Diseño y<br>
+      Fabricación Industrial
+    </h1>
+
+    <p>
+      Portafolio profesional enfocado en diseño mecánico,
+      fabricación CNC, modelado 3D, automatización,
+      desarrollo industrial y proyectos para minería e infraestructura.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="primary-btn">Ver proyectos</a>
+      <a href="#" class="secondary-btn">LinkedIn</a>
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="">
+  </div>
+
+</section>
+
+<section class="projects">
+
+  <h2 class="section-title">
+    Proyectos Destacados
+  </h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Diseño Industrial</h3>
+        <p>
+          Desarrollo de componentes mecánicos y soluciones industriales mediante modelado CAD y fabricación CNC.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Automatización</h3>
+        <p>
+          Integración de sistemas eléctricos y automatización industrial para proyectos de infraestructura.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Modelado 3D</h3>
+        <p>
+          Visualización técnica y diseño profesional aplicado a minería, manufactura y maquinaria pesada.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Nicolás Gallardo — Portafolio Profesional
+</footer>
+
+</body>
+</html>

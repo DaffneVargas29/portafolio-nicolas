@@ -599,7 +599,158 @@ height:52px;}
 
 .header-buttons a:hover{
   background:#222;
-} 
+}
+/* =========================
+   FONDO GENERAL PREMIUM
+========================= */
+
+body{
+  background:
+  linear-gradient(
+    135deg,
+    #f3f3f1 0%,
+    #e7e5e1 25%,
+    #d9d7d3 50%,
+    #efefef 75%,
+    #f8f8f8 100%
+  );
+  
+  background-attachment: fixed;
+}
+
+/* textura elegante */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  
+  background:
+  linear-gradient(
+    rgba(255,255,255,0.04),
+    rgba(0,0,0,0.03)
+  );
+
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* =========================
+   TOOLS PREMIUM
+========================= */
+
+.tools-section{
+
+  margin-top:60px;
+
+  padding:40px;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,0.95),
+    rgba(240,240,240,0.85)
+  );
+
+  border:1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+.tools-title{
+
+  color:#c89b2c;
+
+  font-size:15px;
+
+  font-weight:800;
+
+  letter-spacing:1px;
+
+  margin-bottom:30px;
+
+  text-transform:uppercase;
+}
+
+.tools-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(160px,1fr));
+
+  gap:22px;
+}
+
+.tool-card{
+
+  background:
+  linear-gradient(
+    180deg,
+    #ffffff,
+    #f3f3f3
+  );
+
+  border-radius:24px;
+
+  padding:28px 20px;
+
+  border:1px solid #e5e5e5;
+
+  text-align:center;
+
+  transition:0.35s ease;
+
+  box-shadow:
+  0 6px 18px rgba(0,0,0,0.05);
+}
+
+.tool-card:hover{
+
+  transform:translateY(-6px);
+
+  box-shadow:
+  0 16px 30px rgba(0,0,0,0.12);
+}
+
+.tool-card img{
+
+  width:58px;
+
+  height:58px;
+
+  object-fit:contain;
+
+  filter:
+  grayscale(100%)
+  contrast(115%);
+
+  transition:0.3s ease;
+}
+
+.tool-card:hover img{
+
+  transform:scale(1.08);
+
+  filter:none;
+}
+
+.tool-card span{
+
+  display:block;
+
+  margin-top:16px;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  color:#111;
+}
 </style>
 </head>
 
@@ -848,37 +999,51 @@ height:52px;}
   </div>
 </section>
 
-<section class="tools">
-  <div class="section-label">Herramientas que utilizo</div>
-  <div class="tool-grid">
-    <div class="tool">
-      <img src="assets/inventor.png" alt="">
-    </div>
+<section class="tools-section">
 
-    <div class="tool">
-      <img src="assets/fusion360.png" alt="">
-    </div>
-
-    <div class="tool">
-      <img src="assets/autocad.png" alt="">
-    </div>
-
-    <div class="tool">
-      <img src="assets/blender.png" alt="">
-    </div>
-
-    <div class="tool">
-      <img src="assets/photoshop.png" alt="">
-    </div>
-
-    <div class="tool">
-      <img src="assets/canva.png" alt="">
-    </div>
-
-    <div class="tool">
-      <img src="assets/odoo.png" alt="">
-    </div>
+  <div class="tools-title">
+    HERRAMIENTAS QUE UTILIZO
   </div>
+
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <img src="assets/inventor.png" alt="Inventor">
+      <span>Inventor</span>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/fusion360.png" alt="Fusion 360">
+      <span>Fusion 360</span>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/autocad.png" alt="AutoCAD">
+      <span>AutoCAD</span>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/blender.png" alt="Blender">
+      <span>Blender</span>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/photoshop.png" alt="Photoshop">
+      <span>Photoshop</span>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/canva.png" alt="Canva">
+      <span>Canva</span>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/odoo.png" alt="Odoo">
+      <span>Odoo</span>
+    </div>
+
+  </div>
+
 </section>
 
 <section class="contact" id="contacto">

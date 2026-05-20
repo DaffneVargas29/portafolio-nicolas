@@ -399,11 +399,6 @@ nav a:hover{color:var(--gold)}
   box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
-.gallery-grid img:first-child{
-  height:538px;
-  grid-row:span 2;
-}
-
 .process{
   padding:75px 6%;
   text-align:center;
@@ -839,6 +834,17 @@ body{
 /* PIAR */
 .img-extra{
   object-position:center center;
+}
+.project-card,
+.gallery-grid img,
+.tool-card{
+  transition:all .35s ease;
+}
+
+.project-card:hover,
+.gallery-grid img:hover,
+.tool-card:hover{
+  transform:translateY(-6px);
 }
 </style>
 </head>

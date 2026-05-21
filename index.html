@@ -789,7 +789,7 @@ body::before{
 
   border-radius:24px;
 
-  padding:28px 20px;
+  padding:20px;
 
   border:1px solid #e5e5e5;
 
@@ -799,6 +799,14 @@ body::before{
 
   box-shadow:
   0 6px 18px rgba(0,0,0,0.05);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  min-height:170px;
+
   overflow:hidden;
 }
 
@@ -812,19 +820,19 @@ body::before{
 
 .tool-card img{
 
-  width:90px;
+  width:78px;
 
-  height:90px;
+  height:78px;
 
   object-fit:contain;
 
-  transform:scale(1.35);
+  margin-bottom:18px;
 
   filter:
   grayscale(100%)
   contrast(115%);
 
-  transition:0.3s ease;
+  transition:.3s ease;
 }
 
 .tool-card:hover img{
@@ -838,13 +846,13 @@ body::before{
 
   display:block;
 
-  margin-top:16px;
+  font-size:16px;
 
-  font-size:15px;
-
-  font-weight:700;
+  font-weight:800;
 
   color:#111;
+
+  margin-top:0;
 }
 /* FONDO GENERAL MÁS LIMPIO */
 body{

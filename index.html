@@ -296,6 +296,14 @@ nav a:hover{color:var(--gold)}
   font-weight:900;
   margin-bottom:10px;
 }
+.project-card h3::after{
+  content:"";
+  display:block;
+  width:38px;
+  height:2px;
+  background:#c79b3b;
+  margin-top:10px;
+}
 
 .project-card p{
   color:#ccc;
@@ -846,6 +854,44 @@ body{
 .tool-card:hover{
   transform:translateY(-6px);
 }
+/* CARDS PORTAFOLIO MÁS PROFESIONALES */
+.project-card{
+  background:#202020;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  overflow:hidden;
+  min-height:360px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 18px 35px rgba(0,0,0,.28);
+}
+
+.project-card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.project-card .content{
+  padding:24px 24px 28px;
+  background:#202020;
+  min-height:150px;
+}
+
+.project-card h3{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:12px;
+  color:#fff;
+}
+
+.project-card p{
+  font-size:14px;
+  line-height:1.65;
+  color:#cfcfcf;
+}
 </style>
 </head>
 
@@ -1082,7 +1128,7 @@ body{
   <article class="project-card">
     <img src="assets/BioId.jpeg" alt="BioId">
     <div class="project-info">
-      <h3>BioId</h3>
+      <h3>Bioid</h3>
       <p>
         Solución biométrica industrial para identificación, control y validación de acceso en terreno.
       </p>

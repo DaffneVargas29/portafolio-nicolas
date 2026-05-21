@@ -126,11 +126,13 @@ nav a:hover{color:var(--gold)}
   position:absolute;
   inset:0;
   background:
-    linear-gradient(to right,
-      rgba(236,234,231,0.95) 0%,
-      rgba(236,234,231,0.88) 18%,
-      rgba(236,234,231,0.55) 34%,
-      rgba(236,234,231,0.05) 55%);
+linear-gradient(
+  to right,
+  rgba(248,248,248,.96) 0%,
+  rgba(248,248,248,.90) 18%,
+  rgba(248,248,248,.55) 34%,
+  rgba(248,248,248,.05) 55%
+);
 }
   
 .hero-content{
@@ -460,7 +462,12 @@ nav a:hover{color:var(--gold)}
 .process{
   padding:75px 6%;
   text-align:center;
-  background:rgba(255,255,255,.03);
+  background:
+linear-gradient(
+  135deg,
+  #f5f5f3,
+  #ececec
+);
 }
 
 .steps{
@@ -540,21 +547,25 @@ nav a:hover{color:var(--gold)}
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:50px;
-  background:linear-gradient(
-  90deg,
-  #0b0b0b,
-  #1a1a1a,
-  #0b0b0b
+  background:
+  linear-gradient(
+  135deg,
+  #2b2b2b,
+  #3a3a3a,
+  #2a2a2a
 );
 }
 
 .contact p{
   margin:14px 0;
-  color:#d6d6d6;
+  color:#f3f3f3;
   font-weight:600;
   line-height:1.6;
 }
-
+.contact a{
+  color:#fff;
+  font-weight:700;
+}
 .qr{
   margin-top:20px;
   width:150px;

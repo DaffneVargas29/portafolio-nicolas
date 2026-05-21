@@ -348,8 +348,7 @@ nav a:hover{color:var(--gold)}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:70px;
-  background:
-    linear-gradient(135deg,#fbfbfa,#e5e5e2 52%,#c9c9c5);
+  background:transparent;
 }
 
 .about p{
@@ -410,7 +409,7 @@ nav a:hover{color:var(--gold)}
 .process{
   padding:75px 6%;
   text-align:center;
-  background:linear-gradient(135deg,#eeeeec,#d1d1cd,#f6f6f4);
+  background:rgba(255,255,255,.03);
 }
 
 .steps{
@@ -450,8 +449,10 @@ nav a:hover{color:var(--gold)}
 }
 
 .tools{
-  padding:60px 6%;
-  background:#f8f8f6;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:22px;
 }
 
 .tool-grid{
@@ -488,9 +489,12 @@ nav a:hover{color:var(--gold)}
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:50px;
-  background:
-    radial-gradient(circle at 95% 50%,rgba(0,0,0,.09),transparent 25%),
-    linear-gradient(135deg,#ffffff,#dededa);
+  background:linear-gradient(
+  90deg,
+  #0b0b0b,
+  #1a1a1a,
+  #0b0b0b
+);
 }
 
 .contact p{
@@ -508,7 +512,7 @@ nav a:hover{color:var(--gold)}
 }
 
 footer{
-  background:#070707;
+  background:#050505;
   color:#aaa;
   padding:22px 6%;
   display:flex;
@@ -728,21 +732,23 @@ body::before{
 }
 /* FONDO GENERAL MÁS LIMPIO */
 body{
+  margin:0;
   font-family:'Montserrat',sans-serif;
-
   background:
+    radial-gradient(circle at top center,
+      rgba(255,255,255,.08) 0%,
+      rgba(255,255,255,.02) 25%,
+      rgba(0,0,0,0) 55%),
     linear-gradient(
-      135deg,
-      #f3f3f1 0%,
-      #e7e5e1 25%,
-      #d9d7d3 50%,
-      #efefef 75%,
-      #f8f8f8 100%
+      90deg,
+      #050505 0%,
+      #101010 25%,
+      #1b1b1b 50%,
+      #101010 75%,
+      #050505 100%
     );
-
-  background-attachment: fixed;
-
-  color:#151515;
+  color:#fff;
+  overflow-x:hidden;
 }
 
 /* GALERÍA ARREGLADA */
@@ -856,7 +862,7 @@ body{
 }
 /* CARDS PORTAFOLIO MÁS PROFESIONALES */
 .project-card{
-  background:#202020;
+  background:#181818;
   border:1px solid rgba(255,255,255,.12);
   border-radius:14px;
   overflow:hidden;
@@ -876,7 +882,7 @@ body{
 
 .project-card .content{
   padding:24px 24px 28px;
-  background:#202020;
+  background:#181818;
   min-height:150px;
 }
 
@@ -919,7 +925,7 @@ body{
 }
 
 .more-projects .project-card{
-  background:#202020;
+  background:#181818;
   border:1px solid #383838;
   border-radius:14px;
   overflow:hidden;
@@ -948,6 +954,19 @@ body{
   font-size:14px;
   line-height:1.65;
   color:#cfcfcf;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.03),
+      transparent 30%
+    );
+  z-index:-1;
 }
 </style>
 </head>

@@ -521,24 +521,43 @@ linear-gradient(
 }
 
 .tool{
-  background:white;
-  border:1px solid #ddd;
-  border-radius:10px;
-  padding:22px 12px;
-  text-align:center;
-  font-weight:800;
-  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  background:#f8f8f8;
+  border:1px solid rgba(0,0,0,.08);
+
+  border-radius:18px;
+
+  min-height:140px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:14px;
+
+  transition:.3s ease;
 }
   
 .tool img{
-  width:58px;
-  height:58px;
+  width:72px;
+  height:72px;
+
   object-fit:contain;
-  margin:auto;
+
   transition:.3s ease;
+  filter:grayscale(100%) contrast(120%);
+}
+.tool:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 12px 25px rgba(0,0,0,.12);
+
+  background:#ffffff;
 }
 
 .tool:hover img{
+  filter:none;
   transform:scale(1.08);
 }
   
@@ -1399,7 +1418,7 @@ body::before{
     </div>
 
     <div class="tool-card">
-      <img src="assets/canva1.png" alt="Canva">
+      <img src="assets/canvas1.png" alt="Canva">
       <span>Canva</span>
     </div>
 

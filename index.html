@@ -31,9 +31,9 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(245,245,243,.92);
+  background:rgba(10,10,10,.82);
   backdrop-filter:blur(14px);
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
@@ -71,7 +71,7 @@ nav a:hover{color:var(--gold)}
   position:relative;
   min-height:760px;
   overflow:hidden;
-  background:#eceae7;
+  background:transparent;
   display:flex;
   align-items:center;
   justify-content:flex-start;
@@ -348,7 +348,12 @@ nav a:hover{color:var(--gold)}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:70px;
-  background:transparent;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,.02),
+    rgba(255,255,255,.01)
+  );
 }
 
 .about p{
@@ -499,7 +504,7 @@ nav a:hover{color:var(--gold)}
 
 .contact p{
   margin:14px 0;
-  color:#333;
+  color:#d6d6d6;
   font-weight:600;
   line-height:1.6;
 }

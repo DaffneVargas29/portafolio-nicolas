@@ -31,9 +31,14 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(10,10,10,.82);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+
+  background:
+  rgba(255,255,255,.72);
+
+  backdrop-filter:blur(16px);
+
+  border-bottom:
+  1px solid rgba(0,0,0,.06);
 }
 
 .logo{
@@ -71,7 +76,13 @@ nav a:hover{color:var(--gold)}
   position:relative;
   min-height:760px;
   overflow:hidden;
-  background:transparent;
+  background:
+  linear-gradient(
+  135deg,
+  #f8f8f8,
+  #ececec,
+  #dcdcdc
+);
   display:flex;
   align-items:center;
   justify-content:flex-start;
@@ -235,9 +246,20 @@ nav a:hover{color:var(--gold)}
   margin-top:70px;
   padding:75px 6%;
   color:#fff;
+
   background:
-    radial-gradient(circle at 80% 15%,rgba(255,255,255,.12),transparent 30%),
-    linear-gradient(120deg,#080808,#242424 55%,#111);
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,.10),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #050505,
+      #161616 45%,
+      #0c0c0c
+    );
 }
 
 .section-top{
@@ -269,11 +291,27 @@ nav a:hover{color:var(--gold)}
 }
 
 .project-card{
-  background:#202020;
-  border:1px solid #383838;
-  border-radius:8px;
+  background:
+  linear-gradient(
+    180deg,
+    #1f1f1f,
+    #161616
+  );
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  border-radius:18px;
+
   overflow:hidden;
-  transition:.25s;
+
+  min-height:360px;
+
+  display:flex;
+  flex-direction:column;
+
+  box-shadow:
+  0 20px 45px rgba(0,0,0,.32);
 }
 
 .project-card:hover{
@@ -348,12 +386,13 @@ nav a:hover{color:var(--gold)}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:70px;
+
   background:
-  linear-gradient(
-    135deg,
-    rgba(255,255,255,.02),
-    rgba(255,255,255,.01)
-  );
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.55),
+      rgba(230,230,230,.35)
+    );
 }
 
 .about p{
@@ -393,8 +432,15 @@ nav a:hover{color:var(--gold)}
 }
 
 .gallery{
-  padding:75px 6%;
-  background:#f7f7f5;
+  background:
+  linear-gradient(
+    135deg,
+    #f5f5f3,
+    #ececec,
+    #d8d8d8
+  );
+
+  overflow:hidden;
 }
 
 .gallery h2{
@@ -739,20 +785,16 @@ body::before{
 body{
   margin:0;
   font-family:'Montserrat',sans-serif;
+
   background:
-    radial-gradient(circle at top center,
-      rgba(255,255,255,.08) 0%,
-      rgba(255,255,255,.02) 25%,
-      rgba(0,0,0,0) 55%),
-    linear-gradient(
-      90deg,
-      #050505 0%,
-      #101010 25%,
-      #1b1b1b 50%,
-      #101010 75%,
-      #050505 100%
+    radial-gradient(
+      circle at top center,
+      rgba(255,255,255,.85) 0%,
+      rgba(245,245,245,.92) 35%,
+      rgba(228,228,228,.96) 100%
     );
-  color:#fff;
+
+  color:#111;
   overflow-x:hidden;
 }
 
@@ -975,8 +1017,6 @@ body::before{
 }
 </style>
 </head>
-
-<body>
 
 <header>
   <div class="logo">

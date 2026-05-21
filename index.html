@@ -830,10 +830,11 @@ body::before{
   margin-bottom:22px;
 
   filter:
-  saturate(115%)
-  contrast(105%);
+  grayscale(100%)
+  brightness(.75)
+  contrast(120%);
 
-  transition:.3s ease;
+  transition:.35s ease;
 }
 
 .tool-card:hover img{
@@ -841,8 +842,9 @@ body::before{
   transform:scale(2.55);
 
   filter:
-  saturate(145%)
-  contrast(115%)
+  grayscale(0%)
+  brightness(1)
+  contrast(110%)
 
   drop-shadow(
     0 0 12px rgba(0,0,0,.18)

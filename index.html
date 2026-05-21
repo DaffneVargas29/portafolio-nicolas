@@ -821,31 +821,17 @@ body::before{
 .tool-card img{
 
   width:140px;
-
   height:140px;
 
   object-fit:contain;
 
   transform:scale(2.4);
 
-  filter:
-  grayscale(100%)
-  contrast(115%);
-
-  transition:.3s ease;
-
   margin-bottom:22px;
-}idth:78px;
-
-  height:78px;
-
-  object-fit:contain;
-
-  margin-bottom:18px;
 
   filter:
-  grayscale(100%)
-  contrast(115%);
+  saturate(115%)
+  contrast(105%);
 
   transition:.3s ease;
 }
@@ -854,7 +840,13 @@ body::before{
 
   transform:scale(2.55);
 
-  filter:none;
+  filter:
+  saturate(145%)
+  contrast(115%)
+
+  drop-shadow(
+    0 0 12px rgba(0,0,0,.18)
+  );
 }
 .tool-card span{
 
@@ -959,14 +951,27 @@ body{
 }
 
 /* FEUP MÁS HD */
-.img-feup{
-  object-fit:contain !important;
+.img-cajas{
 
-  background:#f4f4f4;
+  width:100%;
+  height:100%;
 
-  padding:10px;
+  min-height:260px;
 
-  image-rendering:auto;
+  background:
+  linear-gradient(
+    135deg,
+    #f3f3f3,
+    #dfdfdf
+  );
+
+  object-fit:cover;
+
+  object-position:center;
+
+  padding:0;
+
+  border-radius:18px;
 }
 
 /* SOMAR */

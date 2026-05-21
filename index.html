@@ -834,6 +834,20 @@ body::before{
 
   transition:.3s ease;
 }
+.logo-odoo{
+
+  width:140px !important;
+
+  height:auto !important;
+
+  transform:none !important;
+
+  filter:
+  grayscale(100%)
+  contrast(115%);
+
+  object-fit:contain;
+}
 
 .tool-card:hover img{
 
@@ -1436,9 +1450,12 @@ body::before{
     </div>
 
     <div class="tool-card">
-      <img src="assets/odoo.png" alt="Odoo">
-      <span>Odoo</span>
-    </div>
+  <img class="logo-odoo"
+  src="assets/odoo.png"
+  alt="Odoo">
+
+  <span>Odoo</span>
+</div>
 
   </div>
 
